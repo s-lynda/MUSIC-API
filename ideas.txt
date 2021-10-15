@@ -1,0 +1,61 @@
+ TRACK
+--------------------------------------------------------------------
+TrackName: String
+AlbumTitle: String
+ArtistName : String
+genre : String
+lang: String 
+release  : Date
+writer(s) : String    
+production : String
+length : number 
+Lyrics : String               
+popularity : number  ////  (number / 5 or 6  ,,,, rating !)  
+
+Loundness
+Danceability
+Energy
+BPM (tempo) // Speed or pace of the song, measured in beats per minute 
+
+trendin (may be)
+
+Album (contient tracks du meme artist)
+-----------------------------------------
+id :mongodb 
+ArtistId : mongodb (artist)
+Albumtitle: String
+Genre : String 
+Yearpublish : number 
+Number_of_tracks : number
+Album_length : number
+Price : number
+Number_of_sales : number
+list_of_Tracks :{ Track }
+Critics : String
+
+USER ( soit un artist or  simple  user  )
+--------------------------------------
+Id : mongodb
+UserName: String           // unique 
+E-mail: String             // unique
+Year birth : number
+Country : String
+City : String
+Password : String
+
+Artist (is artist) : { boolean 
+}
+
+Playlist ( contient que ca soit tracks wla smth else ! we add what ever we want )
+-----------------------------------
+
+playlistName : String
+  public: Boolean
+User : Id _user 
+List_of_tracks : { Track }
+Number_of_tracks : number 
+Playlist_length : number
+
+  // isMoody : booleen
+  // isDancy : booleen 
+

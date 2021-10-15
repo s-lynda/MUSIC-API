@@ -1,0 +1,37 @@
+----------------------------------------------
+USER
+----------------------------------
+Create a user : POST to : /users    // simple user
+Show information : GET to : /users/:id
+Update information : PUT : /users/:id   // restricted only user
+Update user into an Artist : PUT to : /users/:id/toAdmin // must be secured
+
+-------------------------------------------------
+TRACK 
+----------------------
+Create a Track : POST to  : /tracks    // must be an Admin
+Show specific track : GET to : /tracks/:id /:x //full details
+Edit track(update track) : PUT to : /tracks/:id // detailed
+delete Track : DELETE to : /tracks/:id
+Rating a Track: POST to : /tracks/:id/rate // restricted only user
+Editing a rate : PUT to : /tracks/:id/rate // restricted only user
+-------------------------------------------
+ALBUM 
+------------------------------------------------
+create an album :post to /Albums
+show an album : Get /Albums
+update album : put /Albums/:id
+deleteAlbum :delete /Albums/:id
+add a song to album  (modify album) : put /album/:id/addTrack
+delete a song from an album : delete /album/:id/deletetrack
+
+------------------------
+Playlists
+------------------------------
+create  a playlist : post to /playlists ( both artist and simple user can create a playlist)
+delete playlists :DELETE TO :/playlists/ :id 
+modify playlists: PUT TO : /plalists /:id  (metadata, add/move/remove tracks)
+show  public playlist : GET to : /playlists
+Show a specific list : GET to : /playlists/:id
+Add a Track to my playlist : PUT to : /playlist/:id/addTrack // restricted only user (ghie user li crea hedik liste li ye9dr y'editiha )
+delete content from a playlist : delete to : /playlist/:id/deleteContent
